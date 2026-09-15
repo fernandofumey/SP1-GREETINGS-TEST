@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google" content="notranslate">
-    <title>Spanish Conversation Quiz</title>
+    <title>SP1 Greetings Test</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            /* Prevent AI sidebars and students from highlighting text */
+            /* Prevent text selection to deter cheating/copying */
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
@@ -16,7 +16,6 @@
             font-family: 'Inter', sans-serif;
         }
         
-        /* Custom radio button styles for better visibility */
         input[type="radio"] {
             transform: scale(1.2);
             margin-right: 10px;
@@ -28,36 +27,36 @@
             align-items: center;
             padding: 1rem;
             border-radius: 0.5rem;
-            border: 2px solid #bfdbfe;
+            border: 2px solid #bae6fd;
             background-color: white;
             cursor: pointer;
             transition: all 0.2s;
         }
         
         .option-label:hover {
-            border-color: #60a5fa;
-            background-color: #eff6ff;
+            border-color: #38bdf8;
+            background-color: #f0f9ff;
         }
         
         input[type="radio"]:checked + .option-text {
             font-weight: bold;
-            color: #1e3a8a;
+            color: #0369a1;
         }
     </style>
 </head>
-<body class="bg-blue-50 text-blue-900 min-h-screen flex flex-col items-center justify-center p-4" oncontextmenu="return false;" oncopy="return false;" oncut="return false;" onpaste="return false;">
+<body class="bg-sky-50 text-sky-950 min-h-screen flex flex-col items-center justify-center p-4" oncontextmenu="return false;" oncopy="return false;" oncut="return false;" onpaste="return false;">
 
-    <!-- URL to your Google Apps Script Web App (Follow instructions below to get this) -->
     <script>
+        // Replace this string with your deployed Google Apps Script Web App URL
         const GOOGLE_SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxCS4RTjryw4mNi7frycJVuY0dXO9iEHqKMkTjRLQwiRKmhf5Yoa_pFUsCQwXvxP6g/exec"; 
     </script>
 
-    <div id="app-container" class="w-full max-w-3xl bg-white rounded-2xl shadow-xl overflow-hidden relative">
+    <div id="app-container" class="w-full max-w-3xl bg-white rounded-2xl shadow-xl overflow-hidden relative border border-sky-100">
         
         <!-- Header -->
-        <div class="bg-blue-600 p-6 text-white text-center">
-            <h1 class="text-3xl font-bold tracking-wide">Spanish Greetings & Farewells</h1>
-            <p class="text-blue-200 mt-2">Translate the phrases from Spanish to English</p>
+        <div class="bg-sky-600 p-6 text-white text-center">
+            <h1 class="text-3xl font-bold tracking-wide">SP1 Greetings Test</h1>
+            <p class="text-sky-100 mt-2">Test your Spanish conversation, greeting, and vocabulary mastery</p>
         </div>
 
         <!-- START SCREEN -->
@@ -66,21 +65,21 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-sm font-semibold mb-1">First Name</label>
-                        <input type="text" id="fname" required class="w-full border-2 border-blue-200 rounded-lg p-3 focus:outline-none focus:border-blue-500">
+                        <input type="text" id="fname" required class="w-full border-2 border-sky-200 rounded-lg p-3 focus:outline-none focus:border-sky-500">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold mb-1">Last Name</label>
-                        <input type="text" id="lname" required class="w-full border-2 border-blue-200 rounded-lg p-3 focus:outline-none focus:border-blue-500">
+                        <input type="text" id="lname" required class="w-full border-2 border-sky-200 rounded-lg p-3 focus:outline-none focus:border-sky-500">
                     </div>
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold mb-1">School Email / ID</label>
-                    <input type="text" id="email" required class="w-full border-2 border-blue-200 rounded-lg p-3 focus:outline-none focus:border-blue-500">
-                    <p class="text-xs text-red-500 mt-1 hidden" id="email-error">This email has already taken the quiz.</p>
+                    <label class="block text-sm font-semibold mb-1">School Email / ID (Alphanumeric allowed)</label>
+                    <input type="text" id="email" required class="w-full border-2 border-sky-200 rounded-lg p-3 focus:outline-none focus:border-sky-500">
+                    <p class="text-xs text-red-500 mt-1 hidden" id="email-error">This email/ID has already taken the quiz.</p>
                 </div>
                 <div>
                     <label class="block text-sm font-semibold mb-1">Period</label>
-                    <select id="period" required class="w-full border-2 border-blue-200 rounded-lg p-3 focus:outline-none focus:border-blue-500 bg-white">
+                    <select id="period" required class="w-full border-2 border-sky-200 rounded-lg p-3 focus:outline-none focus:border-sky-500 bg-white">
                         <option value="" disabled selected>Select your period...</option>
                         <option value="1st">1st</option>
                         <option value="A2">A2</option>
@@ -91,11 +90,11 @@
                     </select>
                 </div>
                 <div class="pt-4">
-                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-200 text-lg">
-                        Begin Quiz
+                    <button type="submit" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-200 text-lg">
+                        Begin Test
                     </button>
-                    <p class="text-xs text-center text-blue-500 mt-3 font-semibold">
-                        Warning: Do not click out of this window or switch tabs. Cheating attempts will be recorded!
+                    <p class="text-xs text-center text-sky-600 mt-3 font-semibold">
+                        Warning: Leaving the active test window or clicking away will trigger a cheating alert!
                     </p>
                 </div>
             </form>
@@ -104,21 +103,21 @@
         <!-- QUIZ SCREEN -->
         <div id="quiz-screen" class="p-8 hidden">
             <div class="flex justify-between items-center mb-6">
-                <span id="question-tracker" class="text-sm font-bold bg-blue-100 text-blue-800 py-1 px-3 rounded-full">Question 1 / 25</span>
+                <span id="question-tracker" class="text-sm font-bold bg-sky-100 text-sky-800 py-1 px-3 rounded-full">Question 1 / 40</span>
                 <span id="cheat-counter-display" class="text-sm font-bold text-red-500 hidden">Alerts: <span id="cheat-number">0</span></span>
             </div>
             
-            <h2 id="question-text" class="text-2xl font-bold mb-6 text-center text-blue-950 select-none"></h2>
+            <h2 id="question-text" class="text-2xl font-bold mb-6 text-center text-sky-950 select-none"></h2>
             
             <div id="options-container" class="space-y-3 mb-8">
                 <!-- Options injected via JS -->
             </div>
             
             <div class="flex justify-between">
-                <button id="btn-back" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-6 rounded-lg transition duration-200 disabled:opacity-50">
+                <button id="btn-back" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-6 rounded-lg transition duration-200 disabled:opacity-50">
                     Back
                 </button>
-                <button id="btn-next" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-lg shadow-md transition duration-200">
+                <button id="btn-next" class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-2 px-8 rounded-lg shadow-md transition duration-200">
                     Next
                 </button>
             </div>
@@ -127,14 +126,14 @@
         <!-- END SCREEN -->
         <div id="end-screen" class="p-8 hidden text-center">
             <div class="text-6xl mb-4">🎉</div>
-            <h2 class="text-3xl font-bold mb-4 text-blue-900">Quiz Complete!</h2>
+            <h2 class="text-3xl font-bold mb-4 text-sky-900">Test Complete!</h2>
             <p class="text-lg mb-6">Your results have been submitted and downloaded automatically.</p>
-            <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8 inline-block">
-                <p class="text-sm text-gray-600 mb-1">Your Score</p>
-                <p id="final-score" class="text-4xl font-bold text-blue-600"></p>
+            <div class="bg-sky-50 border border-sky-200 rounded-lg p-6 mb-8 inline-block">
+                <p class="text-sm text-gray-600 mb-1">Your Final Score</p>
+                <p id="final-score" class="text-4xl font-bold text-sky-600"></p>
             </div>
             <div>
-                <button id="btn-refresh" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-md transition duration-200">
+                <button id="btn-refresh" class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-8 rounded-lg shadow-md transition duration-200">
                     Start Over (New Student)
                 </button>
             </div>
@@ -146,7 +145,7 @@
         <div class="bg-white rounded-xl p-8 max-w-sm w-full text-center shadow-2xl transform scale-100">
             <div class="text-red-500 text-5xl mb-4">⚠️</div>
             <h2 class="text-2xl font-bold text-red-600 mb-2">Cheating Detected!</h2>
-            <p class="text-gray-700 mb-6">You left the active test window. This action has been recorded and reported to your teacher.</p>
+            <p class="text-gray-700 mb-6">You left the active test window or clicked outside the designated area. This action has been recorded.</p>
             <button id="btn-cheat-ok" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-lg w-full">
                 I Understand
             </button>
@@ -154,48 +153,47 @@
     </div>
 
     <script>
-        // Quiz Data - 40 Questions based on "Copy of Spanish_Conversation_Creator_Individual_Boxes (1).pdf"
         const masterQuestions = [
-            { id: 1, es: "It is 9:00 AM. You meet a transfer student named Mateo. Which phrase is the correct morning greeting?", en: "¡Buenos días!", distractors: ["Buenas tardes", "Buenas noches", "Hasta luego"] },
-            { id: 2, es: "You want to ask Mateo what his name is. How do you say 'What is your name?'", en: "¿Cómo te llamas?", distractors: ["¿Cómo estás?", "¿Qué tal?", "¿Y tú?"] },
-            { id: 3, es: "Mateo asks for your name. How do you start your response?", en: "Me llamo...", distractors: ["Mucho gusto", "Encantado", "Igualmente"] },
-            { id: 4, es: "Mateo introduces himself, and you want to say 'Delighted to meet you.' Which expression should you use?", en: "Encantado, -a", distractors: ["Nada", "Regular", "Todo bien"] },
-            { id: 5, es: "Mateo says 'Mucho gusto'. What is the most natural way to respond 'Likewise'?", en: "Igualmente", distractors: ["Por favor", "¡Salud!", "¡Ayúdame por favor!"] },
-            { id: 6, es: "You see a classmate and say '¡Hola!'. How do you informally ask 'How are you?'", en: "¿Cómo estás?", distractors: ["¿Cómo está Ud.?", "¿Qué pasa?", "¿Puedo ir al baño?"] },
-            { id: 7, es: "Your friend asks how you are doing, and you are doing very well. How do you express this?", en: "(Muy) bien", distractors: ["Más o menos", "Regular", "Nada"] },
-            { id: 8, es: "You just told Mateo that you are fine. How would you ask 'And you?' back to him in a familiar way?", en: "¿Y tú?", distractors: ["¿Y usted (Ud.)?", "¿Qué tal?", "Hasta pronto"] },
-            { id: 9, es: "Your friend asks '¿Qué pasa?' (What's happening?). You want to reply 'Nothing.' What do you say?", en: "Nada", distractors: ["Todo bien", "Más o menos", "Regular"] },
+            { id: 1, es: "It is 9:00 AM. You meet a transfer student named Mateo in your morning class. Which phrase is the correct morning greeting?", en: "¡Buenos días!", distractors: ["Buenas tardes", "Buenas noches", "¡Hola!"] },
+            { id: 2, es: "You want to ask Mateo what his name is. How do you say 'What is your name?'", en: "¿Cómo te llamas?", distractors: ["¿Cómo estás?", "¿De dónde eres?", "¿Qué tal?"] },
+            { id: 3, es: "Mateo asks for your name. How do you start your response?", en: "Me llamo...", distractors: ["Soy de...", "Tengo... años", "Estoy bien"] },
+            { id: 4, es: "Mateo introduces himself, and you want to say 'Delighted to meet you.' Which expression should you use?", en: "Encantado", distractors: ["Mucho", "Igual", "Por favor"] },
+            { id: 5, es: "Mateo says 'Mucho gusto'. What is the most natural way to respond 'Likewise'?", en: "Igualmente", distractors: ["De nada", "Adiós", "Gracias"] },
+            { id: 6, es: "You see a classmate and say '¡Hola!'. How do you informally ask 'How are you?'", en: "¿Cómo estás?", distractors: ["¿Cómo está Ud.?", "¿Qué hora es?", "¿Quién es?"] },
+            { id: 7, es: "Your friend asks how you are doing, and you are doing very well. How do you express this?", en: "Muy bien", distractors: ["Más o menos", "Regular", "Nada"] },
+            { id: 8, es: "You just told Mateo that you are fine. How would you ask 'And you?' back to him in a familiar way?", en: "¿Y tú?", distractors: ["¿Y usted?", "¿Y él?", "¿Y ellos?"] },
+            { id: 9, es: "Your friend asks '¿Qué pasa?' (What's happening?). You want to reply 'Nothing.' What do you say?", en: "Nada", distractors: ["Todo bien", "Así es", "Mucho"] },
             { id: 10, es: "You walk into Señora Gómez's classroom at 2:30 PM. Which greeting is the most appropriate?", en: "Buenas tardes", distractors: ["¡Buenos días!", "Buenas noches", "¡Hola!"] },
-            { id: 11, es: "How do you respectfully ask your teacher, Señora Gómez, 'How are you?'", en: "¿Cómo está Ud.?", distractors: ["¿Cómo estás?", "¿Cómo te llamas?", "¿Qué tal?"] },
-            { id: 12, es: "You need to ask your teacher for permission to use the restroom. Which phrase is correct?", en: "¿Puedo ir al baño?", distractors: ["¿Puedo beber agua?", "¿Me presta un cargador?", "Necesito un lápiz por favor"] },
-            { id: 13, es: "During class, you become thirsty. How do you ask to get a drink of water?", en: "¿Puedo beber agua?", distractors: ["¿Puedo ir al baño?", "¡Ayúdame por favor!", "¡Salud!"] },
-            { id: 14, es: "Your computer battery is dying. How do you ask your teacher to borrow a charger?", en: "¿Me presta un cargador?", distractors: ["Necesito un lápiz por favor", "¿Puedo ir al baño?", "¿Puedo beber agua?"] },
-            { id: 15, es: "You are confused about the assignment and need assistance from the teacher. What should you say?", en: "¡Ayúdame por favor!", distractors: ["Por favor", "¡Salud!", "Todo bien"] },
-            { id: 16, es: "You realize you do not have a writing utensil for the quiz. What do you tell the teacher?", en: "Necesito un lápiz por favor", distractors: ["¿Me presta un cargador?", "¿Puedo ir al baño?", "¡Ayúdame por favor!"] },
-            { id: 17, es: "It is 7:00 PM and you see your friend Alex outside of school. How should you greet him?", en: "Buenas noches", distractors: ["Buenas tardes", "¡Buenos días!", "Hasta luego"] },
-            { id: 18, es: "Alex asks how you are, but you feel just okay. Which phrase means 'average' or 'regular'?", en: "Regular", distractors: ["(Muy) bien", "Todo bien", "Nada"] },
-            { id: 19, es: "You want to tell Alex that things are 'so-so'. Which phrase do you use?", en: "Más o menos", distractors: ["(Muy) bien", "Regular", "Nada"] },
-            { id: 20, es: "While you are talking, Alex suddenly sneezes (¡Atchú!). What is the polite way to respond?", en: "¡Salud!", distractors: ["¡Ayúdame por favor!", "Por favor", "Igualmente"] },
-            { id: 21, es: "It is time to leave. Which farewell phrase specifically translates to 'See you later'?", en: "Hasta luego", distractors: ["Hasta mañana", "Hasta pronto", "¡Nos vemos!"] },
-            { id: 22, es: "You plan to see Alex at school the very next day. Which phrase means 'See you tomorrow'?", en: "Hasta mañana", distractors: ["Hasta luego", "Hasta pronto", "¡Adiós! / ¡Chao!"] },
-            { id: 23, es: "You are parting ways but expect to see each other very shortly. How do you say 'See you soon'?", en: "Hasta pronto", distractors: ["Hasta mañana", "Hasta luego", "¡Nos vemos!"] },
-            { id: 24, es: "What is a very common and casual way to say 'We'll see each other' to a friend?", en: "¡Nos vemos!", distractors: ["¡Adiós! / ¡Chao!", "Hasta pronto", "Hasta mañana"] },
-            { id: 25, es: "You are waving goodbye as you walk away. Which of these is a direct way to say goodbye?", en: "¡Adiós! / ¡Chao!", distractors: ["¡Nos vemos!", "Hasta luego", "Hasta pronto"] },
-            { id: 26, es: "Translate to Spanish: 'Hello!'", en: "¡Hola!", distractors: ["¡Adiós!", "Por favor", "¡Salud!"] },
-            { id: 27, es: "Translate to Spanish: 'What's up?'", en: "¿Qué tal?", distractors: ["¿Qué pasa?", "¿Cómo estás?", "¿Y tú?"] },
-            { id: 28, es: "Translate to Spanish: 'What's happening?'", en: "¿Qué pasa?", distractors: ["¿Qué tal?", "¿Cómo está Ud.?", "Nada"] },
-            { id: 29, es: "Translate to Spanish: 'Nice to meet you'", en: "Mucho gusto", distractors: ["Encantado, -a", "Igualmente", "Por favor"] },
-            { id: 30, es: "Translate to Spanish: 'All good'", en: "Todo bien", distractors: ["Nada", "Regular", "Más o menos"] },
-            { id: 31, es: "Translate to Spanish: 'Please'", en: "Por favor", distractors: ["¡Salud!", "¡Ayúdame por favor!", "Igualmente"] },
-            { id: 32, es: "You answered 'Muy bien' to the teacher. How do you formally ask 'And you?' back?", en: "¿Y usted (Ud.)?", distractors: ["¿Y tú?", "¿Qué tal?", "¿Cómo estás?"] },
-            { id: 33, es: "You want to write 'Mr. Gómez'. Which abbreviation should you use?", en: "Sr.", distractors: ["Sra.", "Srta.", "Ud."] },
-            { id: 34, es: "You want to write 'Mrs. Gómez'. Which abbreviation should you use?", en: "Sra.", distractors: ["Sr.", "Srta.", "Ud."] },
-            { id: 35, es: "You are addressing a young female teacher. Which title is appropriate?", en: "Señorita", distractors: ["Señora", "Señor", "Usted"] },
-            { id: 36, es: "Which of the following is a polite check-in appropriate for a teacher?", en: "¿Cómo está Ud.?", distractors: ["¿Qué pasa?", "¿Qué tal?", "¿Y tú?"] },
-            { id: 37, es: "Which of the following is a polite check-in appropriate for a friend?", en: "¿Cómo estás?", distractors: ["¿Cómo está Ud.?", "¿Y usted (Ud.)?", "Me llamo..."] },
-            { id: 38, es: "If someone tells you 'Me llamo Carlos', what is the most polite response?", en: "Mucho gusto", distractors: ["Nada", "Regular", "¡Salud!"] },
-            { id: 39, es: "If someone tells you 'Mucho gusto', what is the most polite response?", en: "Igualmente", distractors: ["Nada", "Regular", "¡Salud!"] },
-            { id: 40, es: "If someone sneezes and you say '¡Salud!', what are they likely to say back?", en: "Gracias", distractors: ["De nada", "Por favor", "Igualmente"] }
+            { id: 11, es: "How do you respectfully ask your teacher, Señora Gómez, 'How are you?' (formal)", en: "¿Cómo está Ud.?", distractors: ["¿Cómo estás?", "¿Qué pasa?", "¿Qué te cuentas?"] },
+            { id: 12, es: "You need to ask your teacher for permission to use the restroom. Which phrase is correct?", en: "¿Puedo ir al baño?", distractors: ["¿Puedo beber agua?", "¿Me presta un cargador?", "¡Ayúdame por favor!"] },
+            { id: 13, es: "During class, you become thirsty. How do you ask to get a drink of water?", en: "¿Puedo beber agua?", distractors: ["¿Puedo ir al baño?", "Necesito un lápiz por favor.", "¿Qué tal?"] },
+            { id: 14, es: "Your computer battery is dying. How do you ask your teacher to borrow a charger?", en: "¿Me presta un cargador?", distractors: ["¿Puedo ir al baño?", "¿Puedo beber agua?", "Necesito un lápiz por favor."] },
+            { id: 15, es: "You are confused about the assignment and need assistance from the teacher. What should you say?", en: "¡Ayúdame por favor!", distractors: ["¡Adiós!", "¡Salud!", "Todo bien"] },
+            { id: 16, es: "You realize you do not have a writing utensil for the quiz. What do you tell the teacher?", en: "Necesito un lápiz por favor.", distractors: ["Me llamo...", "Encantado", "Hasta mañana"] },
+            { id: 17, es: "It is 7:00 PM and you see your friend Alex outside of school. How should you greet him?", en: "Buenas noches", distractors: ["¡Buenos días!", "Buenas tardes", "¿Cómo estás?"] },
+            { id: 18, es: "Alex asks how you are, but you feel just okay. Which phrase means 'average' or 'regular'?", en: "Regular", distractors: ["Muy bien", "Nada", "Todo bien"] },
+            { id: 19, es: "You want to tell Alex that things are 'so-so'. Which phrase do you use?", en: "Más o menos", distractors: ["Muy bien", "Igualmente", "Encantado"] },
+            { id: 20, es: "While you are talking, Alex suddenly sneezes (¡Atchú!). What is the polite way to respond?", en: "¡Salud!", distractors: ["¡Adiós!", "Por favor", "De nada"] },
+            { id: 21, es: "It is time to leave. Which farewell phrase specifically translates to 'See you later'?", en: "Hasta luego", distractors: ["Hasta mañana", "Hasta pronto", "¡Adiós!"] },
+            { id: 22, es: "You plan to see Alex at school the very next day. Which phrase means 'See you tomorrow'?", en: "Hasta mañana", distractors: ["Hasta luego", "Hasta pronto", "¡Nos vemos!"] },
+            { id: 23, es: "You are parting ways but expect to see each other very shortly. How do you say 'See you soon'?", en: "Hasta pronto", distractors: ["Hasta luego", "Hasta mañana", "¡Adiós!"] },
+            { id: 24, es: "What is a very common and casual way to say 'We'll see each other' to a friend?", en: "¡Nos vemos!", distractors: ["¡Chao!", "¡Adiós!", "Buenas noches"] },
+            { id: 25, es: "You are waving goodbye as you walk away. Which of these is a direct way to say goodbye?", en: "¡Adiós!", distractors: ["¡Hola!", "Buenos días", "Mucho gusto"] },
+            { id: 26, es: "How do you say 'Everything is fine' when someone checks in on you?", en: "Todo bien", distractors: ["Más o menos", "Regular", "Nada"] },
+            { id: 27, es: "What informal question means 'What's up?' or 'What's going on?' (similar to ¿Qué pasa?)", en: "¿Qué tal?", distractors: ["¿Cómo estás?", "¿Cómo te llamas?", "¿Y tú?"] },
+            { id: 28, es: "When addressing someone formally, which pronoun abbreviation do you use instead of tú?", en: "Ud. (usted)", distractors: ["Tú", "Vos", "El"] },
+            { id: 29, es: "What is a casual equivalent of saying goodbye (derived from Italian or popular slang)?", en: "Chao", distractors: ["Hola", "Buenos días", "Por favor"] },
+            { id: 30, es: "If you want to say 'Please' in Spanish when making a polite request, you say:", en: "Por favor", distractors: ["Gracias", "De nada", "Lo siento"] },
+            { id: 31, es: "If you are female, how would you say 'Delighted to meet you'?", en: "Encantada", distractors: ["Encantado", "Igualmente", "Mucho gusto"] },
+            { id: 32, es: "What phrase means 'Nothing' when asked what is happening?", en: "Nada", distractors: ["Todo bien", "Regular", "Más o menos"] },
+            { id: 33, es: "How do you state that you are feeling 'very well' or 'good'?", en: "(muy) bien", distractors: ["Regular", "Nada", "Más o menos"] },
+            { id: 34, es: "Which phrase is used to greet someone generally with just 'Good' or 'Hello' in an informal way?", en: "Buenas", distractors: ["Buenos días", "Buenas tardes", "Buenas noches"] },
+            { id: 35, es: "When parting ways for the evening, what polite wish can you say to someone going to sleep?", en: "Buenas noches", distractors: ["Buenas tardes", "Buenos días", "Hasta luego"] },
+            { id: 36, es: "Which informal check-in phrase translates literally to 'What do you tell me?' or 'What's your news?'", en: "¿Qué te cuentas?", distractors: ["¿Qué pasa?", "¿Qué tal?", "¿Cómo estás?"] },
+            { id: 37, es: "If you want to say 'See you tomorrow' specifically using tomorrow's vocabulary, you use:", en: "Hasta mañana", distractors: ["Hasta luego", "Hasta pronto", "¡Nos vemos!"] },
+            { id: 38, es: "If you need someone's assistance in the classroom, how do you phrase 'Help me please!'?", en: "¡Ayúdame por favor!", distractors: ["Necesito un lápiz", "¿Puedo ir al baño?", "¿Me presta un cargador?"] },
+            { id: 39, es: "If you want to ask if everything is going well as an informal check-in, you say:", en: "¿Todo bien?", distractors: ["¿Qué tal?", "¿Cómo estás?", "¿Qué pasa?"] },
+            { id: 40, es: "When responding to a formal introduction with 'Likewise', what word is appropriate?", en: "Igualmente", distractors: ["Encantado", "Mucho gusto", "De nada"] }
         ];
 
         let studentData = {};
@@ -203,9 +201,8 @@
         let cheatCount = 0;
         let currentQuestionIndex = 0;
         let shuffledQuestions = [];
-        let userAnswers = []; // Store answers here
+        let userAnswers = []; 
 
-        // DOM Elements
         const screens = {
             start: document.getElementById('start-screen'),
             quiz: document.getElementById('quiz-screen'),
@@ -224,7 +221,6 @@
         const cheatNumber = document.getElementById('cheat-number');
         const btnRefresh = document.getElementById('btn-refresh');
 
-        // Utilities
         function shuffleArray(array) {
             let curId = array.length;
             while (0 !== curId) {
@@ -242,13 +238,11 @@
             screens[screenName].classList.remove('hidden');
         }
 
-        // Start Quiz
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             const email = document.getElementById('email').value.trim().toLowerCase();
             
-            // Check for previous attempt
-            const completedEmails = JSON.parse(localStorage.getItem('completedEmails') || '[]');
+            const completedEmails = JSON.parse(localStorage.getItem('completedEmailsSP1GreetingsTest') || '[]');
             if (completedEmails.includes(email)) {
                 emailError.classList.remove('hidden');
                 return;
@@ -262,8 +256,7 @@
                 period: document.getElementById('period').value
             };
 
-            // Prepare Quiz (Picks exactly 40 random questions)
-            shuffledQuestions = shuffleArray([...masterQuestions]).slice(0, 40).map(q => {
+            shuffledQuestions = shuffleArray([...masterQuestions]).map(q => {
                 let options = shuffleArray([q.en, ...q.distractors]);
                 return { ...q, options: options };
             });
@@ -277,7 +270,6 @@
             renderQuestion();
         });
 
-        // Render Question
         function renderQuestion() {
             const q = shuffledQuestions[currentQuestionIndex];
             questionTracker.textContent = `Question ${currentQuestionIndex + 1} / ${shuffledQuestions.length}`;
@@ -289,7 +281,7 @@
                 const isChecked = userAnswers[currentQuestionIndex] === opt;
                 const optHtml = `
                     <label class="option-label" onclick="selectRadio('opt-${index}')">
-                        <input type="radio" name="answer" id="opt-${index}" value="${opt}" class="form-radio text-blue-600 h-5 w-5" ${isChecked ? 'checked' : ''}>
+                        <input type="radio" name="answer" id="opt-${index}" value="${opt}" class="form-radio text-sky-600 h-5 w-5" ${isChecked ? 'checked' : ''}>
                         <span class="option-text ml-3 text-lg">${opt}</span>
                     </label>
                 `;
@@ -300,12 +292,10 @@
             btnNext.textContent = currentQuestionIndex === shuffledQuestions.length - 1 ? 'Finish' : 'Next';
         }
 
-        // Expose to window for inline onclick in labels
         window.selectRadio = function(id) {
             document.getElementById(id).checked = true;
         }
 
-        // Navigation
         function saveAnswer() {
             const selected = document.querySelector('input[name="answer"]:checked');
             if (selected) {
@@ -332,7 +322,6 @@
             }
         });
 
-        // Keyboard support (Enter to go next)
         document.addEventListener('keydown', (e) => {
             if (quizActive && e.key === 'Enter') {
                 e.preventDefault();
@@ -340,7 +329,6 @@
             }
         });
 
-        // Anti-Cheating
         function registerCheat() {
             if (!quizActive) return;
             cheatCount++;
@@ -353,36 +341,30 @@
             cheatModal.classList.add('hidden');
         });
 
-        // Detect window blur (switching tabs/apps)
         window.addEventListener('blur', () => {
             if (quizActive && cheatModal.classList.contains('hidden')) {
                 registerCheat();
             }
         });
 
-        // Detect mouse leaving the active viewport (e.g. going up to URL bar or extensions)
         document.addEventListener('mouseleave', (e) => {
             if (quizActive && e.clientY <= 0 && cheatModal.classList.contains('hidden')) {
                 registerCheat();
             }
         });
 
-        // Detect visibility change (switching tabs)
         document.addEventListener('visibilitychange', () => {
             if (document.hidden && quizActive && cheatModal.classList.contains('hidden')) {
                 registerCheat();
             }
         });
 
-        // Finish Quiz
         function finishQuiz() {
             quizActive = false;
             
-            // Calculate Score
             let correctCount = 0;
-            let resultsBreakdownArr = []; // Array to store "1r, 2w, 3r" based on ORIGINAL question ID
+            let resultsBreakdownArr = [];
 
-            // Sort questions back to original 1-25 order for the sheet breakdown
             let evaluation = shuffledQuestions.map((q, idx) => {
                 let ans = userAnswers[idx];
                 let isCorrect = ans === q.en;
@@ -395,22 +377,18 @@
                 resultsBreakdownArr.push(`${item.id}${item.correct ? 'r' : 'w'}`);
             });
 
-            const finalScoreStr = `${correctCount}/${shuffledQuestions.length}`;
+            const percentage = Math.round((correctCount / shuffledQuestions.length) * 100);
+            const finalScoreStr = `${percentage}%`;
             const resultsBreakdownStr = resultsBreakdownArr.join(', ');
 
-            // Mark email as completed
-            const completedEmails = JSON.parse(localStorage.getItem('completedEmails') || '[]');
+            const completedEmails = JSON.parse(localStorage.getItem('completedEmailsSP1GreetingsTest') || '[]');
             completedEmails.push(studentData.email);
-            localStorage.setItem('completedEmails', JSON.stringify(completedEmails));
+            localStorage.setItem('completedEmailsSP1GreetingsTest', JSON.stringify(completedEmails));
 
-            // Update UI
             document.getElementById('final-score').textContent = finalScoreStr;
             switchScreen('end');
 
-            // Send to Google Sheets
             sendToGoogleSheets(finalScoreStr, resultsBreakdownStr);
-
-            // Auto-Download CSV
             downloadCSV(finalScoreStr);
         }
 
@@ -418,7 +396,7 @@
             if(GOOGLE_SHEET_WEB_APP_URL === "YOUR_GOOGLE_WEB_APP_URL_HERE") return;
 
             const payload = {
-                title: "Spanish Conversation Quiz",
+                title: "SP1 Greetings Test",
                 date: new Date().toLocaleString(),
                 firstName: studentData.firstName,
                 lastName: studentData.lastName,
@@ -440,15 +418,14 @@
         }
 
         function downloadCSV(score) {
-            // CSV does NOT include the right/wrong breakdown per instructions
             const headers = ["Title", "Date", "First Name", "Last Name", "Period", "Score", "Cheating Alerts"];
             const row = [
-                "Spanish Conversation Quiz",
+                "SP1 Greetings Test",
                 new Date().toLocaleString().replace(/,/g, ''),
                 studentData.firstName,
                 studentData.lastName,
                 studentData.period,
-                `="${score}"`, // Force string so excel doesnt format as date
+                `="${score}"`,
                 cheatCount
             ];
 
@@ -458,7 +435,7 @@
             
             const link = document.createElement("a");
             link.setAttribute("href", url);
-            link.setAttribute("download", `Spanish_Quiz_Results_${studentData.lastName}_${studentData.firstName}.csv`);
+            link.setAttribute("download", `SP1_Greetings_Test_${studentData.lastName}_${studentData.firstName}.csv`);
             link.style.visibility = 'hidden';
             document.body.appendChild(link);
             link.click();
